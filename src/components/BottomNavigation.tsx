@@ -59,11 +59,8 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({ totalPages }) => {
           </svg>
         </button>
 
-        {/* Page Indicator */}
+        {/* Page Indicator - Removed */}
         <div className="flex items-center space-x-2">
-          <span className="text-popx-dark text-sm font-medium">
-            {currentPageNum} of {totalPages}
-          </span>
         </div>
 
         {/* Right Arrow */}

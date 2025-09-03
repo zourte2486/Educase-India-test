@@ -28,13 +28,13 @@ const CreateAccountPage: React.FC = () => {
   return (
     <div className="flex flex-col h-full bg-popx-white">
       {/* Main Content */}
-      <div className="flex-1 px-8 py-8 overflow-y-auto">
-        <h1 className="text-popx-dark font-medium text-3xl mb-4 text-center font-rubik">
+      <div className="flex-1 px-8 py-6 overflow-hidden">
+        <h1 className="text-popx-dark font-medium text-2xl mb-3 text-center font-rubik">
           Create your PopX account
         </h1>
         
         {/* Form */}
-        <div className="space-y-6 mt-8">
+        <div className="space-y-4 mt-4">
           <Input
             label="Full Name"
             type="text"
@@ -105,7 +105,7 @@ const CreateAccountPage: React.FC = () => {
           <Button 
             onClick={handleSubmit}
             variant="primary"
-            className="mt-8"
+            className="mt-4"
           >
             Create Account
           </Button>

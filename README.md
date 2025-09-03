@@ -1,4 +1,4 @@
- # PopX Mobile App
+# PopX Mobile App
 
 A pixel-perfect React JS mobile application built for internship qualifier task.
 
@@ -36,17 +36,20 @@ A pixel-perfect React JS mobile application built for internship qualifier task.
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd popx-mobile-app
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start development server:
+
 ```bash
 npm run dev
 ```
@@ -63,16 +66,21 @@ The built files will be in the `dist` directory.
 
 ## Deployment
 
-This project is configured for deployment on Vercel:
+This project is configured for deployment on Netlify:
 
 1. Push your code to GitHub
-2. Connect your repository to Vercel
+2. Connect your repository to Netlify
 3. Deploy automatically
+
+The project includes:
+- `netlify.toml` configuration file
+- `public/_redirects` for SPA routing
+- Production build tested and working
 
 ## Design Specifications
 
 - **Viewport**: 375x812 (iPhone X/11/12/13/14)
-- **Colors**: 
+- **Colors**:
   - Primary Purple: #6C25FF
   - Dark Text: #1D2226
   - Gray Text: #919191
