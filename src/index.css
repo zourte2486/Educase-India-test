@@ -43,4 +43,23 @@
       border-radius: 0;
     }
   }
+  
+  /* Tablet and larger screens */
+  @media (min-width: 768px) {
+    body {
+      padding: 2rem;
+    }
+    
+    #root {
+      max-width: 375px;
+      margin: 0 auto;
+    }
+  }
+  
+  /* Large screens */
+  @media (min-width: 1024px) {
+    body {
+      padding: 4rem;
+    }
+  }
 }
