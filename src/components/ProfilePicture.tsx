@@ -40,10 +40,10 @@ const ProfilePicture: React.FC<ProfilePictureProps> = ({
     <div className={`flex items-center ${className}`}>
       <div className="relative">
         <div className={`${sizeClasses[size]} bg-gray-300 rounded-full flex items-center justify-center`}>
-          <span className="text-popx-dark font-medium">{getInitials(name)}</span>
+          <span className="text-[#1D2226] font-medium">{getInitials(name)}</span>
         </div>
         {showEditIcon && (
-          <div className={`absolute -bottom-1 -right-1 ${iconSizeClasses[size]} bg-popx-purple rounded-full flex items-center justify-center`}>
+          <div className={`absolute -bottom-1 -right-1 ${iconSizeClasses[size]} bg-[#6C25FF] rounded-full flex items-center justify-center`}>
             <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
             </svg>
@@ -51,8 +51,8 @@ const ProfilePicture: React.FC<ProfilePictureProps> = ({
         )}
       </div>
       <div className="ml-4">
-        <h2 className="text-popx-dark font-medium text-lg">{name}</h2>
-        <p className="text-popx-gray text-sm">{email}</p>
+        <h2 className="text-[#1D2226] font-medium text-lg">{name}</h2>
+        <p className="text-[#919191] text-sm">{email}</p>
       </div>
     </div>
   );

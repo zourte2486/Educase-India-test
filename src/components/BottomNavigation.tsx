@@ -41,21 +41,25 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({ totalPages }) => {
   };
 
   return (
-    <div className="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-100 px-8 py-4">
+    <div className="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-100 px-8 py-6">
       <div className="flex items-center justify-between">
         {/* Left Arrow */}
         <button 
           onClick={goToPrevious}
-          className="p-2 hover:bg-gray-50 rounded-full transition-colors"
+          className={`p-3 rounded-full transition-all duration-200 ${
+            currentPageNum === 1 
+              ? 'bg-gray-100 text-gray-300 cursor-not-allowed' 
+              : 'bg-[#6C25FF] text-white hover:bg-opacity-90 active:scale-95 shadow-lg'
+          }`}
           disabled={currentPageNum === 1}
         >
           <svg 
-            className={`w-5 h-5 ${currentPageNum === 1 ? 'text-gray-300' : 'text-popx-dark'}`} 
+            className="w-6 h-6" 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
 
@@ -66,16 +70,20 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({ totalPages }) => {
         {/* Right Arrow */}
         <button 
           onClick={goToNext}
-          className="p-2 hover:bg-gray-50 rounded-full transition-colors"
+          className={`p-3 rounded-full transition-all duration-200 ${
+            currentPageNum === totalPages 
+              ? 'bg-gray-100 text-gray-300 cursor-not-allowed' 
+              : 'bg-[#6C25FF] text-white hover:bg-opacity-90 active:scale-95 shadow-lg'
+          }`}
           disabled={currentPageNum === totalPages}
         >
           <svg 
-            className={`w-5 h-5 ${currentPageNum === totalPages ? 'text-gray-300' : 'text-popx-dark'}`} 
+            className="w-6 h-6" 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
           </svg>
         </button>
       </div>

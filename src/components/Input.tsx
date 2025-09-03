@@ -21,7 +21,7 @@ const Input: React.FC<InputProps> = ({
 }) => {
   return (
     <div className={className}>
-      <label className="block text-popx-purple text-sm font-normal mb-2">
+      <label className="block text-[#6C25FF] text-sm font-normal mb-2">
         {label}{required && '*'}
       </label>
       <input
@@ -29,7 +29,7 @@ const Input: React.FC<InputProps> = ({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full px-4 py-3 border border-popx-light-gray rounded-lg text-popx-dark placeholder-popx-gray focus:outline-none focus:border-popx-purple transition-colors duration-200"
+        className="w-full px-4 py-3 border border-[#E5E5E5] rounded-lg text-[#1D2226] placeholder-[#919191] focus:outline-none focus:border-[#6C25FF] transition-colors duration-200"
       />
     </div>
   );
