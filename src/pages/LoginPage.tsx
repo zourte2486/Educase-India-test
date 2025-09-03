@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Button from '../components/Button';
+import Input from '../components/Input';
 
 const LoginPage: React.FC = () => {
   const navigate = useNavigate();
@@ -16,50 +18,37 @@ const LoginPage: React.FC = () => {
     <div className="flex flex-col h-full bg-white">
       {/* Main Content */}
       <div className="flex-1 flex flex-col justify-center px-8">
-        <h1 className="text-popx-dark font-medium text-3xl mb-4 text-center">
+        <h1 className="text-popx-dark font-medium text-3xl mb-4 text-center font-rubik">
           Signin to your PopX account
         </h1>
-        <p className="text-popx-dark text-lg mb-12 text-center leading-relaxed">
+        <p className="text-popx-dark text-lg mb-12 text-center leading-relaxed font-rubik">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         </p>
         
         {/* Form */}
         <div className="space-y-6">
-          {/* Email Field */}
-          <div>
-            <label className="block text-popx-purple text-sm font-normal mb-2">
-              Email Address
-            </label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter email address"
-              className="w-full px-4 py-3 border border-popx-light-gray rounded-lg text-popx-dark placeholder-popx-gray focus:outline-none focus:border-popx-purple"
-            />
-          </div>
+          <Input
+            label="Email Address"
+            type="email"
+            value={email}
+            onChange={setEmail}
+            placeholder="Enter email address"
+          />
 
-          {/* Password Field */}
-          <div>
-            <label className="block text-popx-purple text-sm font-normal mb-2">
-              Password
-            </label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter password"
-              className="w-full px-4 py-3 border border-popx-light-gray rounded-lg text-popx-dark placeholder-popx-gray focus:outline-none focus:border-popx-purple"
-            />
-          </div>
+          <Input
+            label="Password"
+            type="password"
+            value={password}
+            onChange={setPassword}
+            placeholder="Enter password"
+          />
 
-          {/* Login Button */}
-          <button 
+          <Button 
             onClick={handleLogin}
-            className="w-full bg-popx-light-gray text-white font-medium py-4 rounded-lg text-base"
+            variant="secondary"
           >
             Login
-          </button>
+          </Button>
         </div>
       </div>
     </div>

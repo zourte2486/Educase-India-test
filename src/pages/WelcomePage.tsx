@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Button from '../components/Button';
 
 const WelcomePage: React.FC = () => {
   const navigate = useNavigate();
@@ -8,27 +9,27 @@ const WelcomePage: React.FC = () => {
     <div className="flex flex-col h-full bg-white">
       {/* Main Content */}
       <div className="flex-1 flex flex-col justify-center px-8">
-        <h1 className="text-popx-dark font-medium text-3xl mb-4 text-center">
+        <h1 className="text-popx-dark font-medium text-3xl mb-4 text-center font-rubik">
           Welcome to PopX
         </h1>
-        <p className="text-popx-dark text-lg mb-12 text-center leading-relaxed">
+        <p className="text-popx-dark text-lg mb-12 text-center leading-relaxed font-rubik">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         </p>
         
         {/* Buttons */}
         <div className="space-y-4">
-          <button 
+          <Button 
             onClick={() => navigate('/create-account')}
-            className="w-full bg-popx-purple text-white font-medium py-4 rounded-lg text-base"
+            variant="primary"
           >
             Create Account
-          </button>
-          <button 
+          </Button>
+          <Button 
             onClick={() => navigate('/login')}
-            className="w-full bg-popx-light-gray text-popx-dark font-medium py-4 rounded-lg text-base"
+            variant="secondary"
           >
             Already Registered? Login
-          </button>
+          </Button>
         </div>
       </div>
     </div>
