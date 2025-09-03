@@ -2,6 +2,10 @@
 
 A pixel-perfect React JS mobile application built for internship qualifier task.
 
+## Live Preview 
+
+https://popxtest.netlify.app/
+
 ## Features
 
 - 🎨 **Pixel-perfect design** matching Adobe XD specifications
