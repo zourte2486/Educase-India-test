@@ -26,7 +26,7 @@ const CreateAccountPage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-full bg-white">
+    <div className="flex flex-col h-full bg-popx-white">
       {/* Main Content */}
       <div className="flex-1 px-8 py-8 overflow-y-auto">
         <h1 className="text-popx-dark font-medium text-3xl mb-4 text-center font-rubik">
