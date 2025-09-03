@@ -1,14 +1,27 @@
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import WelcomePage from './pages/WelcomePage';
+import LoginPage from './pages/LoginPage';
+import CreateAccountPage from './pages/CreateAccountPage';
+import AccountSettingsPage from './pages/AccountSettingsPage';
+import BottomNavigation from './components/BottomNavigation';
+
 function App() {
   return (
     <div className="w-full h-screen bg-gray-100 flex items-center justify-center">
-      <div className="w-full max-w-sm h-full bg-white shadow-lg rounded-3xl overflow-hidden">
-        <div className="p-8 text-center">
-          <h1 className="text-2xl font-medium text-popx-dark mb-4">PopX App</h1>
-          <p className="text-popx-gray">Tailwind CSS is working!</p>
-        </div>
+      <div className="w-full max-w-sm h-full bg-white shadow-lg rounded-3xl overflow-hidden relative">
+        <Router>
+          <Routes>
+            <Route path="/" element={<WelcomePage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/create-account" element={<CreateAccountPage />} />
+            <Route path="/account-settings" element={<AccountSettingsPage />} />
+          </Routes>
+          <BottomNavigation currentPage={1} totalPages={4} />
+        </Router>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
