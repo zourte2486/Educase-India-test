@@ -73,6 +73,7 @@ This project is configured for deployment on Netlify:
 3. Deploy automatically
 
 The project includes:
+
 - `netlify.toml` configuration file
 - `public/_redirects` for SPA routing
 - Production build tested and working
